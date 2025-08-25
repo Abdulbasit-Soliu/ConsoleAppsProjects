@@ -39,5 +39,5 @@ Projects inspired by the [Ultimate C# Masterclass on Udemy](https://www.udemy.co
 
 ## 📫 Connect
 Feel free to explore, fork, or reach out:
-- GitHub: [My-username]([https://github.com/your-username](https://github.com/Abdulbasit-Soliu))
-- LinkedIn: [My-linkedin]([https://linkedin.com/in/your-linkedin](https://www.linkedin.com/in/abdulbasit-soliu-75901b250/))
+- GitHub: [My-username](https://github.com/Abdulbasit-Soliu)
+- LinkedIn: [My-linkedin](https://www.linkedin.com/in/abdulbasit-soliu-75901b250/)
