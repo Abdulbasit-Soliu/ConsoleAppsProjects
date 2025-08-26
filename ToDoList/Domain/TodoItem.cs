@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-
-public class TodoItem : ITodoService
+﻿public class TodoItem : ITodoService
 {
     private List<string> _todo = new List<string>();
     private readonly IApplicationInteractor _applicationInteractor;
@@ -20,7 +18,7 @@ public class TodoItem : ITodoService
             {
                 _applicationInteractor.PrintMessage("The description cannot be empty.");
             }
-            else if (!_todo.Contains(userInput))
+            else if (_todo.Contains(userInput))
             {
                 _applicationInteractor.PrintMessage("The description must be unique.");
             }
@@ -42,13 +40,13 @@ public class TodoItem : ITodoService
             SeeAll();
             if (_todo.Count == 0)
             {
-                _applicationInteractor.PrintMessage("No TODOs have been added yet.");
+               
                 break;
             }
             var userInput = _applicationInteractor.GetInput();
             int userInputtedIndex;
             var convertSuccess = int.TryParse(userInput, out userInputtedIndex);
-            if (!string.IsNullOrEmpty(userInput) || !string.IsNullOrWhiteSpace(userInput))
+            if (string.IsNullOrWhiteSpace(userInput))
             {
                 _applicationInteractor.PrintMessage("Selected index cannot be empty.");
             }
@@ -58,7 +56,10 @@ public class TodoItem : ITodoService
             }
             else
             {
+               
+                _applicationInteractor.PrintMessage($"TODO removed: {_todo[userInputtedIndex - 1]}");
                 _todo.RemoveAt(userInputtedIndex - 1);
+                isInputValid = true;
             }
 
         }

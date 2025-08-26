@@ -8,7 +8,7 @@
         _todos = todos;
         _applicationInteractor = applicationInteractor;
     }
-   public void HandleUserActions()
+    public void HandleUserActions()
     {
         bool exit = false;
         while (exit == false)
